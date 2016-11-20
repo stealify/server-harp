@@ -5,26 +5,26 @@ The Core Server and Cli
 myproject/
   |- package.json
   |- index.js
-  |+ src/
-    |+ api/
-    |+ lib/
-  |+ dist/
-    |+ api/
-    |+ lib/
-  |+ public/
+  + src/
+    + api/
+    + lib/
+  + dist/
+    + api/
+    + lib/
+  + public/
     |- package.json
     |- steal.lock
-    |+ dist/
+    + dist/
       |- 404.html
       |- index.html
       |- main.js
-      |- main.css
-    |+ src/
+      +- main.css
+    + src/
       |- _layout.pug
       |- 404.pug
       |- index.stache
       |- main.coffee
-      |- main.less
+      +- main.less
 ```
 
 
