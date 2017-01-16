@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+/*
+ * @page index DSSRV
+ * @tag home
+ *
+ * ###DIREKTSPEED Server
+ *  
+ * Our DSSRV only has two classes:
+ *  
+ * * server 
+ * * server 
+ */
+// needs reading of $PWD for accepting .
+var program = require('../lib/cli');
+
+program.parse(process.argv);
+
+if (!program.args.length) {
+  program.help();
+}

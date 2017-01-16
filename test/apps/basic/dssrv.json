@@ -1,0 +1,9 @@
+module.exports = ps a{
+  "basicAuth": [],
+  "globals": {
+    "brand" : "Kitchen Sink",
+    "name"  : "Brock Whitten",
+    "email" : "brock@chloi.io",
+    "uri"   : "http://example.com"
+  }
+}
