@@ -1,9 +1,13 @@
-# DIREKTSPEED Server - Module PreRender
-
-This is Forked from harp most and then got improved
+# steal-server formarly DIREKTSPEED Server 
 
 
-> zero-configuration web server with built in pre-processing
+
+
+> zero-configuration web server with built in:
+ - pre-processing
+ - Ssr
+ - NodeJS Project
+ 
 > can be used with DIREKTSPEED Server as Module
 
 ### What is DIREKTSPEED Server - Module PreRender?
