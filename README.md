@@ -7,14 +7,14 @@
  - pre-processing
  - Ssr
  - NodeJS Project
- 
-> can be used with DIREKTSPEED Server as Module
+> can be used with DIREKTSPEED Server as Modules
 
-### What is DIREKTSPEED Server - Module PreRender?
+### What is DIREKTSPEED Server
 
-DIREKTSPEED Server is a static web server that also serves doT Jade, Markdown, EJS, Less, Stylus, Sass, and CoffeeScript **as** HTML, CSS, and JavaScript without any configuration. It supports the beloved layout/partial paradigm and it has flexible metadata and global objects for traversing the file system and injecting custom data into templates. Optionally, DIREKTSPEED Server - Module PreRender can also compile your project down to static assets for hosting behind any valid HTTP server.
+DIREKTSPEED Server is a Server and Application Delivery Controler that also serves doT Jade, Markdown, EJS, Less, Stylus, Sass, and CoffeeScript **as** HTML, CSS, and JavaScript without any configuration. It supports the beloved layout/partial paradigm and it has flexible metadata and global objects for traversing the file system and injecting custom data into templates. Optionally, steal-server can also compile your project down to static assets for hosting behind any valid HTTP server.
 
 ### Why?
+Development got Hard this Days if you want to stay up with current Technology. I wanted a Way to Develop Faster and Better then Ever Befor thats why i created this it enables us to Setup fast a Server with all needed Things and Focus more on the Application code.
 
 Pre-compilers are becoming extremely powerful and shipping front-ends as static assets has many upsides. It's simple, it's easy to maintain, it's low risk, easy to scale, and requires low cognitive overhead. I wanted a lightweight web server that was powerful enough for me to abandon web frameworks for dead simple front-end publishing.
 
@@ -29,8 +29,11 @@ Pre-compilers are becoming extremely powerful and shipping front-ends as static 
 - can export assets to HTML/CSS/JS
 - does not require a build steps or grunt task
 - fun to use
+- Many more like image/audio/video preprocessing.
+- Easy Run NodeJS Projects and Manage the Process.
+- Extensiv Local and Remote Debuging and Logging
 
-### Supported Pre-Processors
+### Supported Pre-Processors by steal-prerender
 
 |                 | Language Superset                                                 | Whitespace Sensitive
 | --------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------
@@ -51,13 +54,13 @@ Authored and maintained by [@sintaxi](http://twitter.com/sintaxi). Made for the 
 
 ### Installation
 
-    sudo npm install -g dssrv-srv-prerender
+    sudo npm install -g steal-server
 
 ### Quick Start
 
-Creating a new dssrv-srv-prerender application is a breeze...
+Creating a new steal-prerender application is a breeze...
 
-    prerender init myproj
+    prerender add myproj
     prerender server myproj
 
 Your DIREKTSPEED Server application is now running at [http://localhost:9000]()
