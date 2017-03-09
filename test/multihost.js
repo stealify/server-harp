@@ -1,14 +1,14 @@
-var should      = require("should")
-var request     = require('request')
-var path        = require("path")
-var fs          = require("fs")
-var exec        = require("child_process").exec
-var dssrv        = require("../")();
-var cherio      = require("cheerio");
+var should      = require('should');
+var request     = require('request');
+var path        = require('path');
+var fs          = require('fs');
+var exec        = require('child_process').exec;
+var dssrv        = require('../')();
+var cherio      = require('cheerio');
 
-describe("multihost", function(){
+describe('multihost', function(){
 
-  var projectPath = path.join(__dirname, "apps/multihost");
+  var projectPath = path.join(__dirname, 'apps/multihost');
   var port = 8104;
   var $;
 
@@ -20,23 +20,23 @@ describe("multihost", function(){
     });
   });
 
-  it("should return list of apps", function(done){
-    request("http://localhost:" + port + "/", function(e,r,b){
+  it('should return list of apps', function(done){
+    request('http://localhost:' + port + '/', function(e,r,b){
       // r.statusCode.should.eql(200)
-      b.should.match(new RegExp('http://app.dssrv.nu:' + port))
+      b.should.match(new RegExp('http://app.dssrv.nu:' + port));
       $ = cherio.load(b);
-      urls = $(".projects A");
-      $(".project-name").length.should.eql(4)
+      urls = $('.projects A');
+      $('.project-name').length.should.eql(4);
       done();
     });
   });
 
-  it("dssrv-apps should be served on a compatible URL", function(done) {
+  it('dssrv-apps should be served on a compatible URL', function(done) {
     var sites = [];
     for (var i = 0; i < urls.length; i++) {
-      sites.push($(urls[i]).attr("href"));
+      sites.push($(urls[i]).attr('href'));
     }
-    sites.should.matchAny(new RegExp('http://app.dssrv.nu:' + port))
+    sites.should.matchAny(new RegExp('http://app.dssrv.nu:' + port));
     done();
   });
 
