@@ -1,4 +1,6 @@
-# steal-server formarly DIREKTSPEED Server 
+
+![build](https://travis-ci.org/steal-server/server.svg?branch=master)
+# steal-server formarly DIREKTSPEED Server
 
 
 
@@ -37,7 +39,7 @@ Pre-compilers are becoming extremely powerful and shipping front-ends as static 
 
 |                 | Language Superset                                                 | Whitespace Sensitive
 | --------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------
-| **HTML**        | [EJS](http://embeddedjs.com/)                                     | [Jade](http://jade-lang.com/), [pug](http://pug-lang.com/), [Markdown](http://daringfireball.net/projects/markdown/), [doT](http://http://olado.github.io/doT/index.htm) 
+| **HTML**        | [EJS](http://embeddedjs.com/)                                     | [Jade](http://jade-lang.com/), [pug](http://pug-lang.com/), [Markdown](http://daringfireball.net/projects/markdown/), [doT](http://http://olado.github.io/doT/index.htm)
 | **CSS**         | [LESS](http://lesscss.org/), [Sass (SCSS)](http://sass-lang.com/) | [Stylus](http://learnboost.github.io/stylus/), [Sass](http://sass-lang.com/)
 | **JavaScript**  | (TBD)                                                             | [CoffeeScript](http://coffeescript.org/), [EJS](http://embeddedjs.com/)
 
@@ -129,15 +131,15 @@ var dssrvSrvPrerender = require("dssrv-srv-prerender");
 var app = express();
 ```
 
-```js 
+```js
 // Express 3
-app.configure(function(){ 
+app.configure(function(){
   app.use(express.static(__dirname + "/public"));
   app.use(dssrvSrvPrerender.mount(__dirname + "/public"));
 });
 ```
 
-```js 
+```js
 // Express 4
 
 app.use(express.static(__dirname + "/public"));
@@ -145,8 +147,8 @@ app.use(dssrvSrvPrerender.mount(__dirname + "/public"));
 
 ```
 
-# TODO: 
-Make it extend able via npm install 
+# TODO:
+Make it extend able via npm install
 write a module loader for that
 dssrv-prerender-donejs make use of dssrv/use
 dssrv-prerender could offer a middelware to link all modules from
