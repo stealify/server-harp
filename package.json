@@ -1,6 +1,6 @@
 {
   "name": "steal-server",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "DIREKTSPEED Server - Module PreRender  https://dspeed.eu",
   "author": "Frank Lemanschik <frank@dspeed.eu",
   "contributors": [
@@ -73,7 +73,7 @@
   },
   "scripts": {
     "test": "echo 'TODO: mocha --reporter spec -t 8000' && npm install && echo 'TODO: npm run jshint'",
-    "test:more":" && npm run mocha --reporter spec -t 8000 && npm run document && npm run test-guides",
+    "test:more": " && npm run mocha --reporter spec -t 8000 && npm run document && npm run test-guides",
     "test-guides": "npm run test-quickstart && npm run test-pmo",
     "test-quickstart": "guide guides/guide/test.js --local",
     "test-pmo": "guide guides/place-my-order/test.js --local",
