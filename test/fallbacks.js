@@ -3,7 +3,7 @@ var request     = require('request');
 var path        = require('path');
 var fs          = require('fs');
 var exec        = require('child_process').exec;
-var dssrv        = require('../')();
+var steal        = require('../')();
 
 describe('fallbacks', function(){
 
@@ -13,8 +13,8 @@ describe('fallbacks', function(){
     var port        = 8115;
 
     before(function(done){
-      dssrv.compile(projectPath, outputPath, function(errors, output){
-        dssrv.server(projectPath, { port: port }, function(){
+      steal.compile(projectPath, outputPath, function(errors, output){
+        steal.server(projectPath, { port: port }, function(){
           done();
         });
       });
@@ -48,8 +48,8 @@ describe('fallbacks', function(){
     var port        = 8116;
 
     before(function(done){
-      dssrv.compile(projectPath, outputPath, function(errors, output){
-        dssrv.server(projectPath, { port: port }, function(){
+      steal.compile(projectPath, outputPath, function(errors, output){
+        steal.server(projectPath, { port: port }, function(){
           done();
         });
       });

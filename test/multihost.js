@@ -3,7 +3,7 @@ var request     = require('request');
 var path        = require('path');
 var fs          = require('fs');
 var exec        = require('child_process').exec;
-var dssrv        = require('../')();
+var steal        = require('../')();
 var cherio      = require('cheerio');
 
 describe('multihost', function(){
@@ -15,7 +15,7 @@ describe('multihost', function(){
   var urls = [];
 
   before(function(done){
-    dssrv.multihost(projectPath, { port: port }, function(errors){
+    steal.multihost(projectPath, { port: port }, function(errors){
       done();
     });
   });
@@ -23,7 +23,7 @@ describe('multihost', function(){
   it('should return list of apps', function(done){
     request('http://localhost:' + port + '/', function(e,r,b){
       // r.statusCode.should.eql(200)
-      b.should.match(new RegExp('http://app.dssrv.nu:' + port));
+      b.should.match(new RegExp('http://app.steal.nu:' + port));
       $ = cherio.load(b);
       urls = $('.projects A');
       $('.project-name').length.should.eql(4);
@@ -31,12 +31,12 @@ describe('multihost', function(){
     });
   });
 
-  it('dssrv-apps should be served on a compatible URL', function(done) {
+  it('steal-apps should be served on a compatible URL', function(done) {
     var sites = [];
     for (var i = 0; i < urls.length; i++) {
       sites.push($(urls[i]).attr('href'));
     }
-    sites.should.matchAny(new RegExp('http://app.dssrv.nu:' + port));
+    sites.should.matchAny(new RegExp('http://app.steal.nu:' + port));
     done();
   });
 

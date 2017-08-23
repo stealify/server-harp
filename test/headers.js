@@ -1,14 +1,14 @@
 var should      = require("should")
 var request     = require('request')
 var path        = require('path')
-var dssrv        = require('../')()
+var steal        = require('../')()
 
 describe("headers", function(){
   var projectPath = path.join(__dirname, "apps/headers")
   var port        = 8901
 
   before(function(done){
-    dssrv.server(projectPath, { port: port, config: { basicAuth: [] } }, done)
+    steal.server(projectPath, { port: port, config: { basicAuth: [] } }, done)
   })
 
   // static

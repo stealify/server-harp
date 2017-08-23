@@ -3,7 +3,7 @@ var request     = require('request')
 var path        = require("path")
 var fs          = require("fs")
 var exec        = require("child_process").exec
-var dssrv        = require("../")();
+var steal        = require("../")();
 
 describe("compile", function(){
 
@@ -12,7 +12,7 @@ describe("compile", function(){
     var outputPath  = path.join(__dirname, "out/compile-basic")
 
     it("should compile", function(done){
-      dssrv.compile(projectPath, outputPath, function(error){
+      steal.compile(projectPath, outputPath, function(error){
         should.not.exist(error)
         done()
       })
@@ -67,7 +67,7 @@ describe("compile", function(){
 
 
     it("should compile", function(done){
-      dssrv.compile(projectPath, outputPath, function(error){
+      steal.compile(projectPath, outputPath, function(error){
         should.not.exist(error)
         done()
       })
@@ -105,7 +105,7 @@ describe("compile", function(){
 
 
     it("should compile", function(done){
-      dssrv.compile(projectPath, outputPath, function(error){
+      steal.compile(projectPath, outputPath, function(error){
         should.not.exist(error)
         done()
       })

@@ -2,7 +2,7 @@
 var should  = require("should")
 var request = require('request')
 var path    = require('path')
-var dssrv    = require("../")()
+var steal    = require("../")()
 
 describe("basicAuth", function(){
 
@@ -10,7 +10,7 @@ describe("basicAuth", function(){
     var projectPath = path.join(__dirname, "apps/auth/single")
 
     before(function(done){
-      dssrv.server(projectPath, { port: 8310 }, done)
+      steal.server(projectPath, { port: 8310 }, done)
     })
 
     it("should be a protected page", function(done){

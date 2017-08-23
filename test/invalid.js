@@ -1,7 +1,7 @@
 var should      = require('should');
 var request     = require('request');
 var path        = require('path');
-var dssrv        = require('../')();
+var steal        = require('../')();
 
 
 
@@ -10,13 +10,13 @@ describe('headers', function(){
   var port        = 8801;
 
   before(function(done){
-    dssrv.server(projectPath, { port: port }, done);
+    steal.server(projectPath, { port: port }, done);
   });
 
   it('should return correct mime type for css files', function(done){
     request('http://localhost:' + port + '/invalid-jade.html', function(e,r,b){
       r.statusCode.should.eql(500);
-      b.should.be.an.String().and.not.empty().and.match(new RegExp(dssrv.pkg.version));
+      b.should.be.an.String().and.not.empty().and.match(new RegExp(steal.pkg.version));
       done();
     });
   });

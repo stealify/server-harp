@@ -3,7 +3,7 @@ var request     = require('request')
 var path        = require("path")
 var fs          = require("fs")
 var exec        = require("child_process").exec
-var dssrv        = require("../")()
+var steal        = require("../")()
 
 describe("errors", function(){
 
@@ -13,16 +13,16 @@ describe("errors", function(){
     var port        = 8111
 
     before(function(done){
-      dssrv.server(projectPath, { port: port }, function(){
+      steal.server(projectPath, { port: port }, function(){
         done()
       })
     })
 
-    it("should get error message for invalid dssrv.json", function(done){
+    it("should get error message for invalid steal.json", function(done){
       request('http://localhost:'+ port +'/', function (e, r, b) {
         r.statusCode.should.eql(500)
-        b.should.be.an.String().and.not.empty().and.match(new RegExp(dssrv.pkg.version))
-        dssrv.compile(projectPath, outputPath, function(error){
+        b.should.be.an.String().and.not.empty().and.match(new RegExp(steal.pkg.version))
+        steal.compile(projectPath, outputPath, function(error){
           should.exist(error)
           error.should.have.property("source")
           error.should.have.property("dest")
@@ -42,7 +42,7 @@ describe("errors", function(){
     var port        = 8112
 
     before(function(done){
-      dssrv.server(projectPath, { port: port }, function(){
+      steal.server(projectPath, { port: port }, function(){
         done()
       })
     })
@@ -50,8 +50,8 @@ describe("errors", function(){
     it("should get error message for invalid _data.json", function(done){
       request('http://localhost:'+ port +'/', function (e, r, b) {
         r.statusCode.should.eql(500)
-        b.should.be.an.String().and.not.empty().and.match(new RegExp(dssrv.pkg.version))
-        dssrv.compile(projectPath, outputPath, function(error){
+        b.should.be.an.String().and.not.empty().and.match(new RegExp(steal.pkg.version))
+        steal.compile(projectPath, outputPath, function(error){
           should.exist(error)
           error.should.have.property("source")
           error.should.have.property("dest")
@@ -71,7 +71,7 @@ describe("errors", function(){
     var port        = 8113
 
     before(function(done){
-      dssrv.server(projectPath, { port: port }, function(){
+      steal.server(projectPath, { port: port }, function(){
         done()
       })
     })
@@ -79,8 +79,8 @@ describe("errors", function(){
     it("should get error message for invalid _data.json", function(done){
       request('http://localhost:'+ port +'/', function (e, r, b) {
         r.statusCode.should.eql(500)
-        b.should.be.an.String().and.not.empty().and.match(new RegExp(dssrv.pkg.version))
-        dssrv.compile(projectPath, outputPath, function(error){
+        b.should.be.an.String().and.not.empty().and.match(new RegExp(steal.pkg.version))
+        steal.compile(projectPath, outputPath, function(error){
           should.exist(error)
           error.should.have.property("source")
           error.should.have.property("dest")
@@ -100,7 +100,7 @@ describe("errors", function(){
     var port        = 8114
 
     before(function(done){
-      dssrv.server(projectPath, { port: port }, function(){
+      steal.server(projectPath, { port: port }, function(){
         done()
       })
     })
@@ -108,7 +108,7 @@ describe("errors", function(){
     it("should return proper mime type on 404 page", function(done){
       request('http://localhost:'+ port +'/some/missing/path.css', function (e, r, b) {
         r.statusCode.should.eql(404)
-        b.should.be.an.String().and.not.empty().and.match(new RegExp(dssrv.pkg.version))
+        b.should.be.an.String().and.not.empty().and.match(new RegExp(steal.pkg.version))
         r.headers.should.have.property("content-type", "text/html; charset=UTF-8")
         done()
       })
