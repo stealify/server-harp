@@ -1,15 +1,27 @@
+# steal-server
+
+## New Mission ! This is now the WebComponent Development Server
+Enabling you to pre process assets even importet once from npm to
+create your webcomponents faster then ever or even whole projects
+it does support anything you need to code Web Tech Driven Applications
+
+- supports diffrent bundlers.
+- supports diffrent preprocessors.
+- gives tool chain to work with any code
+
+
 
 ![build](https://travis-ci.org/steal-server/server.svg?branch=master)
-# steal-server formarly DIREKTSPEED Server
+
 
 
 
 
 > zero-configuration web server with built in:
  - pre-processing
- - Ssr
+ - SSR
  - NodeJS Project
-> can be used with DIREKTSPEED Server as Modules
+> can be deployed with DIREKTSPEED Server in production fully horizontal scale able even on a single server.
 
 ### What is DIREKTSPEED Server
 
@@ -34,6 +46,7 @@ Pre-compilers are becoming extremely powerful and shipping front-ends as static 
 - Many more like image/audio/video preprocessing.
 - Easy Run NodeJS Projects and Manage the Process.
 - Extensiv Local and Remote Debuging and Logging
+- Extensible via Modules (Express like HTTP Applications)
 
 ### Supported Pre-Processors by steal-prerender
 
@@ -48,9 +61,6 @@ Pre-compilers are becoming extremely powerful and shipping front-ends as static 
 - **Server Documentation** - [harpjs.com/docs/](http://steal-srv-prerenderjs.com/docs/)
 - **Platform Documentation** - [harp.io/docs](https://steal-srv-prerender.io/docs)
 - **Source Code** - [github.com/steal/srv-prerender](https://github.com/steal/srv-prerender)
-
-
-Authored and maintained by [@sintaxi](http://twitter.com/sintaxi). Made for the [@DIREKTSPEED ServerPlatform](http://twitter.com/DIREKTSPEED ServerPlatform).
 
 ---
 
@@ -71,7 +81,9 @@ Your DIREKTSPEED Server application is now running at [http://localhost:9000]()
 
 ## Documentation
 
-DIREKTSPEED Server - Module PreRender can be used as a library or as a command line utility.
+Steal Server 
+- is a library 
+- Offering command line utility.
 
 ### CLI Usage
 
@@ -151,102 +163,13 @@ app.use(stealSrvPrerender.mount(__dirname + "/public"));
 Make it extend able via npm install
 write a module loader for that
 steal-prerender-donejs make use of steal/use
-steal-prerender could offer a middelware to link all modules from
-the path
-
-
-function npmls(cb) {
-  require('child_process').exec('npm ls --depth 0 --json', function(err, stdout, stderr) {
-    if (err) return cb(err)
-    cb(null, JSON.parse(stdout));
-  });
-}
-npmls(console.log);
-
-
-npm.commands.ls(args, [silent,] callback)
-console.log(Object.keys(require('./package.json').dependencies));
-
-we will probally use rootRequire try catched
-
----- https://gist.github.com/branneman/8048520#comment-1412502
-2. The Global
-
-In your app.js:
-
-global.__base = __dirname + '/';
-In your very/far/away/module.js:
-
-var Article = require(__base + 'app/models/article');
-
-
----
-7. The Wrapper
-
-Courtesy of @a-ignatov-parc. Another simple solution which increases obviousness, simply wrap the require() function with one relative to the path of the application's entry point file.
-
-Place this code in your app.js, again before any require() calls:
-
-global.rootRequire = function(name) {
-    return require(__dirname + '/' + name);
-}
-You can then require modules like this:
-
-var Article = rootRequire('app/models/article');
-
-
-
-------
-
-Install some module:
-
-npm install app-module-path --save
-In your app.js, before any require() calls:
-
-require('app-module-path').addPath(__dirname + '/app');
-
-
-or Use NODE_PATH=. or project root for require
-
-hacky method
-
-process.env.NODE_PATH = __dirname;
-require('module').Module._initPaths();
-
-I've been using symlinks with the following structure:
-```
-/node_modules
-/package.json
-/src
-  /node_modules
-    /client -> ../client
-    /server -> ../server
-    /shared -> ../shared
-  /client
-    /apps
-      /main
-        /test
-          main.spec.js
-        index.js
-    /modules
-      /foo
-        /test
-          foo.spec.js
-        index.js
-  /server
-    /apps
-    /modules
-  /shared
-```
-it also solves the problem of not know where the modules come from because all app modules have client/server/shared prefixes in require paths
-
 
 
 
 
 ## License
 
-Copyright © 2016–2017 [DIREKTSPEED](http://dspeed.eu). All rights reserved.
+Copyright © 2017–2018 [DIREKTSPEED](http://dspeed.eu). All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
