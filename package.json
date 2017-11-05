@@ -35,8 +35,8 @@
   "dependencies": {
     "compression": "^1.6.1",
     "debug": "^2.6.3",
-    "done-serv": "1.5.0-beta.0",
-    "done-ssr-middleware": "^1.2.0-beta.0",
+    "done-serv": "git+https://github.com/donejs/done-serve",
+    "done-ssr-middleware": "git+https://github.com/donejs/done-ssr-middleware",
     "express": "^4.13.4",
     "http-proxy": "^1.13.2",
     "infanticide": "^1.0.1",
