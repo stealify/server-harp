@@ -1,20 +1,12 @@
 #!/usr/bin/env node
-/*
- * @page index steal
- * @tag home
- *
- * ###DIREKTSPEED Server
- *  
- * Our steal only has two classes:
- *  
- * * server 
- * * server 
- */
-// needs reading of $PWD for accepting .
-var program = require('../lib/cli');
-
+var cli = require("../lib/cli");
+var program = cli.program;
 program.parse(process.argv);
-
+cli.run(program);
+/*
+var program = require('../lib/cli');
+program.parse(process.argv);
 if (!program.args.length) {
   program.help();
 }
+*/
