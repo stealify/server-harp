@@ -1,4 +1,17 @@
-# steal-server
+# steal-server (FINAL)
+
+## Goals
+Helps you to serve NodeJS Projects based on a simple reuseable config
+Allows you to serve many express or koa projects on diffrent urls
+
+## Features
+- Flexible configuration via ssr.js / server.js where ssr is voted higher then server
+- Able to serve Unlimited NodeJS Projects via a Single Instance and return the right Project.
+- Big Ecosystem!
+- easy React / Preact SSR
+- easy WebComponents SSR
+- easy CanJS / DoneJS / Steal SSR
+
 
 ## New Mission ! This is now the WebComponent Development Server
 Enabling you to pre process assets even importet once from npm to
@@ -12,10 +25,6 @@ it does support anything you need to code Web Tech Driven Applications
 
 
 ![build](https://travis-ci.org/steal-server/server.svg?branch=master)
-
-
-
-
 
 > zero-configuration web server with built in:
  - pre-processing
