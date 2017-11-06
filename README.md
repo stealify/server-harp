@@ -4,6 +4,31 @@
 Helps you to serve NodeJS Projects based on a simple reuseable config
 Allows you to serve many express or koa projects on diffrent urls
 
+## Use
+
+Push a Application to localhost:3030
+```bash
+steal -p 3030 --develop
+```
+
+Using it best via install global then require inside your app if needed
+use servers === array and run app
+
+
+
+### Planned Features
+- Show Running Servers Status
+- Show Running Servers Registered Routers Tree
+- Easy Modify Routes and Servers
+
+
+### Options
+- mount "aMountPath"
+- hostname "aextra hostname to listen on"
+- host "aIp"
+- ngrock
+
+
 ## Features
 - Flexible configuration via ssr.js / server.js where ssr is voted higher then server
 - Able to serve Unlimited NodeJS Projects via a Single Instance and return the right Project.
