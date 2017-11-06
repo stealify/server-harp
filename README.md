@@ -168,12 +168,6 @@ app.use(stealSrvPrerender.mount(__dirname + "/public"));
 
 ```
 
-# TODO:
-Make it extend able via npm install
-write a module loader for that
-steal-prerender-donejs make use of steal/use
-
-
 
 
 ## License
