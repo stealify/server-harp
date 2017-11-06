@@ -33,6 +33,7 @@
     "url": "git+https://github.com/steal-server/server"
   },
   "dependencies": {
+    "steal": "git+https://github.com/stealify/steal/",
     "compression": "^1.6.1",
     "debug": "^3.0.0",
     "done-serv": "git+https://github.com/donejs/done-serve",
