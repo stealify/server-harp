@@ -1,8 +1,24 @@
-# steal-server (FINAL)
+# steal-server 
 
 ## Goals
 Helps you to serve NodeJS Projects based on a simple reuseable config
 Allows you to serve many express or koa projects on diffrent urls
+Gives you a Modular NodeJS Server Framework.
+
+## Guides:
+- DoneJS + SSR + PHP Or NodeJS Api (Local Development)
+- DoneJS Production build on Nginx + SSR + PHP-FPM (Additional Caching)
+- Use as single domain Static Web Server
+- Use as multi domain Static Only Web Server
+- Use as Mixed Multi domain Static/Dynamic Webserver
+- Use as Static web Server with loadbalancing
+- Use as GIT protocol and http server.
+- Use as Loadbalancer - TCP/UDP
+- Use as TCP Port sharing server
+- Use as Rule Based Firewall
+- Use as manager for iptables, git,docker, networking, users, folder permissions, task runner, cron, plugins supported
+- Use as software deploytool.
+
 
 ## Use
 
