@@ -9,6 +9,15 @@ existing Infrastructure or to even deploy that Infrastructure for you
 Steal Server can also act as a Process Manager or InitD for NodeOS or other Unikernels
 via stealify/config-init-*
 
+## Isomorphic Code
+- it matters for Project Maintainability
+- Faster Testing in Development
+- Faster Deployment to Production
+Learn More about Server Templating in your ssr.js via steal!
+StealJS is a Core Dependency and name giver of this server
+its main Maintainer is a genius called Matthew Philipps and the Bitovi Open Source Team.
+How does StealJS Make Your Code Isomorphic? it allows you to bundle including any asset for Production Frontend and Backend
+as also translate code for Frontend and Backend so see it as the Unifed Bundler Import Method that you ever wanted to have.
 
 ## Why Should i Use this?
 The Cloud and IaaS Prices and Services as also other Capacity and Investment Related Variables are fast Changing you need to be able to protect your Investment to run efficent on any Infrastructure no Matter how it is provided or who provides it.
@@ -34,6 +43,7 @@ You will ask i am a Developer i am DevOp do i need this? YES!
   - It Allows you to Integrate Diffrent CDN and Storage Providers Into a Single Endpoint
   - Integrate Routing and Security Stuff.
 - stealify/config-iaas-openstack
+- stealify/config-iaas-vmware
 - stealify/config-iaas-amazon
 - stealify/config-iaas-virtualbox
 - stealify/config-iaas-kubernetes **Upcoming**
@@ -42,6 +52,8 @@ You will ask i am a Developer i am DevOp do i need this? YES!
 - stealify/config-iaas-mesos
 - stealify/config-iaas-aurora
 - stealify/config-iaas-marathon
+- stealify/config-iaas-vagrant
+- stealify/config-iaas-runc
 
 ## Guides:
 - DoneJS + SSR + PHP Or NodeJS Api (Local Development)
@@ -84,12 +96,13 @@ use servers === array and run app
 
 
 ## Features
-- Flexible configuration via ssr.js / server.js where ssr is voted higher then server
-- Able to serve Unlimited NodeJS Projects via a Single Instance and return the right Project.
+- Flexible configuration via ssr.js / server.js where ssr gets rendered via steal-ssr is voted higher then server that gets executed via stealify/pm steal-pm
+- Able to serve Unlimited NodeJS Projects via a Single Instance and return the right Project via configureable algorythms.
 - Big Ecosystem!
-- easy React / Preact SSR
-- easy WebComponents SSR
-- easy CanJS / DoneJS / Steal SSR
+- easy React / Preact SSR via StealJS
+- easy WebComponents SSR via StealJS
+- easy CanJS / DoneJS via StealJS
+- easy NodeJS Server managment via Stealify/config-* EcoSystem and custom NodeJS/EMCA WA Modules loaded on Demand via StealJS
 
 
 ## New Mission ! This is now the WebComponent Development Server
@@ -112,8 +125,13 @@ it does support anything you need to code Web Tech Driven Applications
 > can be deployed with DIREKTSPEED Server in production fully horizontal scale able even on a single server.
 
 ### What is DIREKTSPEED Server
-
-DIREKTSPEED Server is a Server and Application Delivery Controler that also serves doT Jade, Markdown, EJS, Less, Stylus, Sass, and CoffeeScript **as** HTML, CSS, and JavaScript without any configuration. It supports the beloved layout/partial paradigm and it has flexible metadata and global objects for traversing the file system and injecting custom data into templates. Optionally, steal-server can also compile your project down to static assets for hosting behind any valid HTTP server.
+steal-server stealify/server is a Server and Application Delivery Controller
+  - Supplys Unifed Server Configuration via Modules
+  - Importent Modules are DNS, FS, SSR, PM
+steal-tools stealify/tools is a Cross Plattform Production Application and Any Asset Bundler as also task runner
+  - Dropin Replacment for grunt, and tools like that
+### stealify/prerender-middleware
+serves doT Jade, Markdown, EJS, Less, Stylus, Sass, and CoffeeScript **as** HTML, CSS, and JavaScript without any configuration. It supports the beloved layout/partial paradigm and it has flexible metadata and global objects for traversing the file system and injecting custom data into templates. Optionally, steal-server can also compile your project down to static assets for hosting behind any valid HTTP server via StealJS.
 
 ### Why?
 Development got Hard this Days if you want to stay up with current Technology. I wanted a Way to Develop Faster and Better then Ever Befor thats why i created this it enables us to Setup fast a Server with all needed Things and Focus more on the Application code.
@@ -247,14 +265,5 @@ app.use(stealSrvPrerender.mount(__dirname + "/public"));
 
 ```
 
-
-
 ## License
-
-Copyright © 2017–2018 [DIREKTSPEED](http://dspeed.eu). All rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Created by Frank Lemanschik and the Opensource Community Since 1990–2019 [DIREKTSPEED](https://dspeed.eu)
