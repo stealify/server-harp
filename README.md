@@ -4,6 +4,44 @@
 Helps you to serve NodeJS Projects based on a simple reuseable config
 Allows you to serve many express or koa projects on diffrent urls
 Gives you a Modular NodeJS Server Framework.
+it can easy get used with the stealify/config-* modules to configure your
+existing Infrastructure or to even deploy that Infrastructure for you
+Steal Server can also act as a Process Manager or InitD for NodeOS or other Unikernels
+via stealify/config-init-*
+
+
+## Why Should i Use this?
+The Cloud and IaaS Prices and Services as also other Capacity and Investment Related Variables are fast Changing you need to be able to protect your Investment to run efficent on any Infrastructure no Matter how it is provided or who provides it.
+You will ask is that needed for Normal People like me? YES!
+ - you will want to change your Hosting Provider often even if you rent WebHosting Packages and Not IaaS
+ - you will want to use stealify-fs to Host Your Data Anywhere and keep it automatic backuped
+ - you will want auto renew SSL Certificates via any Provider like Letsencrypt or Your own
+ - Short You will want to reduce admin and maintance and forget about that once configured and change it fast if you need so.
+You will ask i am a Developer i am DevOp do i need this? YES!
+ - You will find no more general way to configure all this software that your Configuring always even if your using docker or other stuff you find your self always repeating the same stuff over and over again you will want to stop that!
+
+## Supported Init Integrations
+- stealify/config-init-systemd
+- stealify/config-init-s6
+- stealify/config-init-pm2
+- stealify/config-init-cloudinit **Upcoming**
+
+## Supported Deployment Integrations
+- stealify/fs => Confugreable Multi Endpoint FileSystem
+  - Stealify FS it Self Allows you to build a Hybrid Multi Cloud Storage Solution
+- stealify/dns
+  - It Allows you to build a Cloudflare Like CDN if bundled with Stealify FS
+  - It Allows you to Integrate Diffrent CDN and Storage Providers Into a Single Endpoint
+  - Integrate Routing and Security Stuff.
+- stealify/config-iaas-openstack
+- stealify/config-iaas-amazon
+- stealify/config-iaas-virtualbox
+- stealify/config-iaas-kubernetes **Upcoming**
+- stealify/config-iaas-firebase
+- stealify/config-iaas-docker
+- stealify/config-iaas-mesos
+- stealify/config-iaas-aurora
+- stealify/config-iaas-marathon
 
 ## Guides:
 - DoneJS + SSR + PHP Or NodeJS Api (Local Development)
