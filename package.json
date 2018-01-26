@@ -55,7 +55,7 @@
     "chalk": "^2.0.0",
     "basic-auth": "^2.0.0",
     "cross-spawn-async": "^2.0.0",
-    "q": "^1.4.1"
+    "q": "^1.0.0"
   },
   "directories": {
     "doc": "docs"
