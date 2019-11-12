@@ -35,7 +35,7 @@
   "dependencies": {
     "steal": "git+https://github.com/stealify/steal/",
     "compression": "^1.6.1",
-    "debug": "^3.0.0",
+    "debug": "^4.0.0",
     "done-serv": "git+https://github.com/donejs/done-serve",
     "done-ssr-middleware": "git+https://github.com/donejs/done-ssr-middleware",
     "express": "^4.13.4",
