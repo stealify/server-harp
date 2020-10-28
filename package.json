@@ -73,7 +73,7 @@
     "mockery": "2.1.0",
     "nixt": "0.5.0",
     "node-fetch": "2.6.1",
-    "request": "2.88.0",
+    "request": "2.88.2",
     "should": "13.1.2",
     "stream-when": "1.0.0"
   },
