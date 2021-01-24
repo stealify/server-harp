@@ -43,7 +43,7 @@
     "infanticide": "^1.0.1",
     "donejs-spdy": "^3.4.7",
     "async": "^2.0.1",
-    "commander": "^4.0.0",
+    "commander": "^7.0.0",
     "download-github-repo": "^0.1.3",
     "dssrv-envy-json": "^0.2.1",
     "escape-html": "^1.0.3",
